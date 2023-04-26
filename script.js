@@ -195,7 +195,7 @@
                 "city": "Bartholomebury",
                 "zipcode": "76495-3109",
                 "geo": {
-                    "lat": "24.6463",
+                    "lat" : "24.6463",
                     "lng": "-168.8889"
                 }
             },
@@ -239,16 +239,46 @@
     let other = []
 
 
-    users.forEach(user => {
-        if(user.email.includes('.org')){
-            emails.org.push(user.email)
-        } else if(user.email.includes('.net')){
-            emails.net.push(user.email)
-        } else if(user.email.includes('.info')){
-            emails.info.push(user.email)
-        } else {
-            other.push(user.email)
-        }
-    })
+    // users.forEach(user => {
+        // if(user.email.includes('.org')){
+        //     emails.org.push(user.email)
+        // } else if(user.email.includes('.net')){
+        //     emails.net.push(user.email)
+        // } else if(user.email.includes('.info')){
+        //     emails.info.push(user.email)
+        // } else {
+        //     other.push(user.email)
+        // }
+    // })
 
-    console.log(emails, other);
+//   for(let i of users ){
+    // if(i.email.includes('.org')){
+    //     emails.org.push(i.email)
+    // } else if(i.email.includes('.net')){
+    //     emails.net.push(i.email)
+    // } else if(i.email.includes('.info')){
+    //     emails.info.push(i.email)
+    // } else {
+    //     other.push(i.email)
+    // }
+//   }
+
+for(let j =0;j<users.length;j++){
+    if(users[j].email.includes('.org')){
+        emails.org.push(users[j].email)
+    } else if(users[j].email.includes('.net')){
+        emails.net.push(users[j].email)
+    } else if(users[j].email.includes('.info')){
+        emails.info.push(users[j].email)
+    } else {
+        other.push(users[j].email)
+    }
+
+}
+
+
+
+
+console.log(emails)
+
+// forIn и forOf тут
